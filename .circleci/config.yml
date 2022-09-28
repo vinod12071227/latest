@@ -1,0 +1,16 @@
+veresion: 2.1
+ workflows: 
+    test-deploy:
+      jobs:
+        -test
+    
+jobs:
+  build:
+    docker:
+      - image: cimg/deploy:2022.09
+    steps:
+      - checkout
+      - run: echo "Do things"
+     steps:
+       - checkout
+       - run: node --version
